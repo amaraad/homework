@@ -77,9 +77,19 @@ WSGI_APPLICATION = 'hello.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        # Ends with "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        # DB name or path to database file if using sqlite3.
+        "NAME": "neondb",
+        # Not used with sqlite3.
+        "USER": "amaraad",
+        # Not used with sqlite3.
+        "PASSWORD": "olrxqp4W8eFn",
+        # Set to empty string for localhost. Not used with sqlite3.
+        "HOST": "ep-bold-recipe-666728.us-east-2.aws.neon.tech",
+        # Set to empty string for default. Not used with sqlite3.
+        "PORT": "",
     }
 }
 
